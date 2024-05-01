@@ -1,0 +1,42 @@
+version: 2.1
+
+commands:
+  install_npm_cache:
+    description: "Installs all modules from a cache"
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-node-{{ checksum "yarn.lock" }}
+      - run: yarn
+  save_npm_cache:
+    description: "Save our modules cache"
+    steps:
+      - save_cache:
+          key: v1-dependencies-node-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+
+jobs:
+  publish:
+    docker:
+      - image: cimg/node:18.15.0
+
+    steps:
+      - checkout
+      - install_npm_cache
+      - save_npm_cache
+      - run:
+          name: Run NPM build script
+          command: bash ./scripts/fury_publish_npm
+
+workflows:
+  publish_via_fury:
+    jobs:
+      - publish:
+          context: ECR
+          filters:
+            tags:
+              only: /^[0-9]+\.[0-9]+\.[0-9,-]+$/
+            branches:
+              ignore: /.*/

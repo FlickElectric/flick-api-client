@@ -1,0 +1,17 @@
+version: 2
+registries:
+  npm-fury:
+    type: npm-registry
+    url: https://npm-proxy.fury.io/flickelectric/
+    token: "${{secrets.GEMFURY_DEPLOY_TOKEN}}"
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  registries:
+  - npm-fury
+  schedule:
+    interval: daily
+    time: '07:00'
+    timezone: Pacific/Auckland
+  labels:
+  - success-squad

@@ -1,0 +1,11 @@
+{
+  "name": "@flick/flick-api-client",
+  "version": "0.0.1",
+  "description": "API Client for consuming the Flick API",
+  "author": "https://github.com/FlickElectric/flick-api-client/graphs/contributors",
+  "license": "UNLICENSED",
+  "main": "src/main.js",
+  "dependencies": {
+    "lodash": "4.17.15"
+  }
+}
