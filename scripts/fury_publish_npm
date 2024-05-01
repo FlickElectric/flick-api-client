@@ -5,7 +5,7 @@ set -eo pipefail
 echo "Building npm package..."
 BUILD_OUTPUT=$(yarn pack)
 PACKAGE_VERSION="$(yarn --silent read-version)"
-PACKAGE_NAME="flick/flick-build"
+PACKAGE_NAME="flick/flick-api-client"
 
 GIT_TAG="$(git tag -l --points-at HEAD)"
 
