@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# script/fury_publish_npm: Push npm package to GemFury
+set -eo pipefail
+echo "Building npm package..."
+BUILD_OUTPUT=$(yarn pack)
+PACKAGE_VERSION="$(yarn --silent read-version)"
+PACKAGE_NAME="flick/flick-build"
+
+GIT_TAG="$(git tag -l --points-at HEAD)"
+
+if [ "$PACKAGE_VERSION" != "$GIT_TAG" ]; then
+  echo "Tag ($GIT_TAG) does not match built package version ($PACKAGE_VERSION) - aborting"
+  exit 1
+fi
+
+echo "Uploading npm package @$PACKAGE_NAME to GemFury"
+
+# Remove the "/" from the name and replace it with the outputted "-" 
+# of the packaged .tar
+PACKAGE_NAME="${PACKAGE_NAME/\//-}"
+
+# Post packaged tar to GemFury
+curl --show-error --fail --form package=@$PACKAGE_NAME-v$PACKAGE_VERSION.tgz https://$GEMFURY_PUSH_TOKEN@push.fury.io/flickelectric/
