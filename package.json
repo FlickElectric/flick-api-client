@@ -6,7 +6,8 @@
   "license": "UNLICENSED",
   "main": "src/main.js",
   "dependencies": {
-    "lodash": "4.17.15"
+    "lodash": "4.17.15",
+    "inflected": "2.1.0"
   },
   "scripts": {
     "read-version": "echo $npm_package_version"
