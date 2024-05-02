@@ -1,6 +1,6 @@
 {
   "name": "@flick/flick-api-client",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "API Client for consuming the Flick API",
   "author": "https://github.com/FlickElectric/flick-api-client/graphs/contributors",
   "license": "UNLICENSED",
