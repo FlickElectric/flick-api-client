@@ -1,4 +1,4 @@
 
-const Deserializer = require("./deserializer")
+const deserialize = require("./deserialize")
 
-module.exports = { Deserializer }
+module.exports = { deserialize }
