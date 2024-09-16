@@ -13,17 +13,15 @@ Add this package to your package.json:
 
 Then, require the deserializer:
 ```javascript
-const { Deserializer } = require("@flick/flick-api-client")
+const { deserialize } = require("@flick/flick-api-client")
 ```
 
 And use it on a response from the api:
 ```javascript
 const response = await client.apiCall({ ... })
 const json = await response.json();
-const deserializer = new Deserializer({ keyForAttribute: "camelCase" });
-return await deserializer.deserialize(json);
+return deserialize(json);
 ```
-_(NB this process will be streamlined in the future)_
 
 ## Development
 
@@ -36,3 +34,12 @@ We use [SemVer](https://semver.org/) for our versioning.
 - Any breaking changes should be clearly noted with "Breaking change: [description]".
 
 NOTE: Make sure that the version is in the format x.x.x, where x is any number. Formats like x.x.x.x will break npm packaging.
+
+## Testing
+
+This library is still in very early stages! There is a single smoke test which ensures that deserialization is working properly. You can run it by running the following:
+
+```
+node smokeTest.js
+```
+It will take a fairly complicated JSON::API response (from the rate cards endpoint in pricing), and serialize it into the desired format.
