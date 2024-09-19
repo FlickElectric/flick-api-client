@@ -2,6 +2,11 @@
 
 We use [SemVer](https://semver.org/) for our versioning and follow [this convention](https://keepachangelog.com/en/1.1.0/) for our changelogs.
 
+## [1.0.1] - 2024-09-20
+
+### Changed
+
+- Fix for deserializing singular / empty relationships
 
 ## [1.0.0] - 2024-09-14
 
