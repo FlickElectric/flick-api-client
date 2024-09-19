@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = ({ data, included }) => {
-  const includedMap = new Map(included.map(item => [`${item.type}:${item.id}`, item]))
+  const includedMap = new Map(included?.map(item => [`${item.type}:${item.id}`, item]))
 
   function serializeItem({ id, type, attributes = {}, relationships = {} }) {
     return {
@@ -14,9 +14,15 @@ module.exports = ({ data, included }) => {
 
   function serializeRelationships(relationships) {
     return Object.entries(relationships).reduce((acc, [key, value]) => {
-      acc[camelCase(key)] = value.data.map(item => 
-        serializeItem(includedMap.get(`${item.type}:${item.id}`))
-      )
+      acc[camelCase(key)] = Array.isArray(value.data) ? 
+        value.data.map(item => {
+          const includedItem = includedMap.get(`${item?.type}:${item?.id}`)
+          return includedItem ? serializeItem(includedItem) : null
+        }) :
+        (() => {
+          const includedItem = includedMap.get(`${value.data?.type}:${value.data?.id}`)
+          return includedItem ? serializeItem(includedItem) : null
+        })()
       return acc
     }, {})
   }
