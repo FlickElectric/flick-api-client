@@ -1,10 +1,11 @@
 {
   "name": "@flick/flick-api-client",
-  "version": "1.0.1",
+  "version": "1.1.0.pre",
   "description": "API Client for consuming the Flick API",
   "author": "https://github.com/FlickElectric/flick-api-client/graphs/contributors",
   "license": "UNLICENSED",
   "main": "src/main.js",
+  "types": "index.d.ts",
   "scripts": {
     "read-version": "echo $npm_package_version"
   }
