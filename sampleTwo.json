@@ -1,0 +1,1217 @@
+{
+    "data": {
+        "id": "7b4e59b3-178c-4108-a763-fe09b72474b4",
+        "type": "public_website_dashboard_state",
+        "relationships": {
+            "account": {
+                "data": {
+                    "id": "134800",
+                    "type": "customer_account"
+                }
+            },
+            "customer": {
+                "data": {
+                    "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                    "type": "billing_customer"
+                }
+            },
+            "contract": {
+                "data": {
+                    "id": "dfc656f2-dfe2-4830-8779-2b84d9824fb2",
+                    "type": "contract_manager_contract"
+                }
+            },
+            "application": {
+                "data": {
+                    "id": "5dfc4978-07de-4d18-8ef7-055603805ba6",
+                    "type": "provisioning_application"
+                }
+            },
+            "receivable_invoices": {
+                "data": [
+                    {
+                        "id": "edb66c18-b479-4e86-83c9-48a6cd290284",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "2d30acad-c7fa-40da-93f8-90b1661c8357",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "ba55df03-5397-4eb1-8433-b534098320c7",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "dd377117-9be1-436b-a265-2138885275bf",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "7b1a81a1-2220-4016-8ff4-5975c3396a8b",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "264461c1-74bb-435b-8443-f7e9dcbf22c1",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "6c0ab989-7699-4477-a707-8a38042b3a4c",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "a6d342f1-f326-4a7d-a60d-1c8c5642e702",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "c537d558-4657-4326-82e1-c6b189fe4d13",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "2f962786-00a6-4b5b-b684-2d0df6f740cf",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "218e6393-1b09-4a98-a00d-ce9541107203",
+                        "type": "billing_receivable_invoice"
+                    },
+                    {
+                        "id": "c914f9e2-57ef-40f2-885e-03305d07077a",
+                        "type": "billing_receivable_invoice"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "id": "cd2a0215-a014-4486-8941-9af38143e770",
+            "type": "contract_manager_product",
+            "attributes": {
+                "name": "Off Peak",
+                "code": "off_peak",
+                "description": "Cheaper prices during off-peak times. Shift your power use to save money.",
+                "brand": "flick"
+            }
+        },
+        {
+            "id": "d3deb8df-18c7-448f-b981-1f96736ad6c2",
+            "type": "contract_manager_plan",
+            "attributes": {
+                "name": "FLICK_OFFPEAK_2024_04_01_midpoint",
+                "term_length": null,
+                "active_period_start_at": "2024-03-31T11:00:00.000Z",
+                "active_period_end_at": null,
+                "rollover_only": true,
+                "new_contract_only": false
+            },
+            "relationships": {
+                "product": {
+                    "data": {
+                        "id": "cd2a0215-a014-4486-8941-9af38143e770",
+                        "type": "contract_manager_product"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/contract_manager/v1/plans/d3deb8df-18c7-448f-b981-1f96736ad6c2"
+            }
+        },
+        {
+            "id": "dfc656f2-dfe2-4830-8779-2b84d9824fb2",
+            "type": "contract_manager_contract",
+            "attributes": {
+                "supply_node_ref": "/network/nz/supply_nodes/ed7617df-4b10-4c8a-a05d-97e91f488299",
+                "party_ref": "/customer/customers/324746",
+                "terminate_at": null,
+                "period_start_at": "2024-03-31T11:00:00.000Z",
+                "period_end_at": null,
+                "effective_end_at": null
+            },
+            "relationships": {
+                "plan": {
+                    "data": {
+                        "id": "d3deb8df-18c7-448f-b981-1f96736ad6c2",
+                        "type": "contract_manager_plan"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/contract_manager/v1/contracts/dfc656f2-dfe2-4830-8779-2b84d9824fb2"
+            }
+        },
+        {
+            "id": "edb66c18-b479-4e86-83c9-48a6cd290284",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20615360,
+                "due_at": "2024-10-24T10:59:59.000Z",
+                "invoiced_at": "2024-10-14T11:00:00.000Z",
+                "status": "open",
+                "display_status": "due",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "12.03",
+                "total_incl_gst": "92.22",
+                "total_excl_gst": "80.19",
+                "balance": "92.22",
+                "consumption_amount": "241.833",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-08-31T12:00:00.000Z",
+                "consumption_range_end": "2024-09-30T10:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "eab45de6-f565-4fb1-ac36-7a0e1dae8fb1",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "2d30acad-c7fa-40da-93f8-90b1661c8357",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "1fbd93aa-aaae-4236-9a23-2feb8f740d51",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "ca137c54-db1a-43c1-98dd-e84c398d7295",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "7ca2ac0b-e91d-4481-8408-aa24f3512659",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "1816789c-da03-4b8d-807f-5b6998d6cc9d",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/edb66c18-b479-4e86-83c9-48a6cd290284",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/edb66c18-b479-4e86-83c9-48a6cd290284"
+            }
+        },
+        {
+            "id": "2d30acad-c7fa-40da-93f8-90b1661c8357",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20517024,
+                "due_at": "2024-09-19T11:59:59.000Z",
+                "invoiced_at": "2024-09-09T12:00:00.000Z",
+                "status": "open",
+                "display_status": "overdue",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "15.09",
+                "total_incl_gst": "115.7",
+                "total_excl_gst": "100.61",
+                "balance": "115.7",
+                "consumption_amount": "350.449",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-07-31T12:00:00.000Z",
+                "consumption_range_end": "2024-08-31T11:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "3891a7f3-3d94-42b2-8a66-8c08226311d4",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "ba55df03-5397-4eb1-8433-b534098320c7",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "45805969-7c34-4bf5-b48a-ca1a530b0b8e",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "2d29cb54-6479-4a34-831b-3602ff6daaba",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "10c2520a-1b30-47d1-aa35-2d110e782ce5",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "1a9db535-551d-4c12-9a6c-3a816c97125d",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/2d30acad-c7fa-40da-93f8-90b1661c8357",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/2d30acad-c7fa-40da-93f8-90b1661c8357"
+            }
+        },
+        {
+            "id": "ba55df03-5397-4eb1-8433-b534098320c7",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20432858,
+                "due_at": "2024-08-22T11:59:59.000Z",
+                "invoiced_at": "2024-08-12T12:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "11.37",
+                "total_incl_gst": "87.14",
+                "total_excl_gst": "75.77",
+                "balance": "0.0",
+                "consumption_amount": "296.721",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-06-30T12:00:00.000Z",
+                "consumption_range_end": "2024-07-31T11:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "ec6ae432-e918-4563-a01e-6dc0faa47918",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "dd377117-9be1-436b-a265-2138885275bf",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "3ec1e0e6-ccfb-4445-b354-49f0b43430be",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "c3bc7fb0-5563-4256-8491-52d4bbbcd763",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "878c223a-f876-409a-a9bc-98e910372c85",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "74745f3f-3a45-4f5f-a8eb-3b54ead12f21",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "043510c4-1f46-470c-850d-0af2b9170412",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/ba55df03-5397-4eb1-8433-b534098320c7",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/ba55df03-5397-4eb1-8433-b534098320c7"
+            }
+        },
+        {
+            "id": "dd377117-9be1-436b-a265-2138885275bf",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20337783,
+                "due_at": "2024-07-18T11:59:59.000Z",
+                "invoiced_at": "2024-07-08T12:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "11.77",
+                "total_incl_gst": "90.22",
+                "total_excl_gst": "78.45",
+                "balance": "0.0",
+                "consumption_amount": "320.245",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-05-31T12:00:00.000Z",
+                "consumption_range_end": "2024-06-30T11:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "c7b68297-dce8-4494-978b-ec63506fc884",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "7b1a81a1-2220-4016-8ff4-5975c3396a8b",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "cf9c08de-e38f-4731-80ca-3f56975bf23b",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "d2037e19-649c-4805-8031-7fafad5850a8",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "9f7db033-b24b-41df-94d9-205bbcf1c4d0",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "24f02573-61da-4c87-8e10-79e6afc7cfa4",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "2a674bef-63ff-430b-899e-f2a200b72449",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/dd377117-9be1-436b-a265-2138885275bf",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/dd377117-9be1-436b-a265-2138885275bf"
+            }
+        },
+        {
+            "id": "7b1a81a1-2220-4016-8ff4-5975c3396a8b",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20257687,
+                "due_at": "2024-06-20T11:59:59.000Z",
+                "invoiced_at": "2024-06-10T12:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "6.6",
+                "total_incl_gst": "50.6",
+                "total_excl_gst": "44.0",
+                "balance": "0.0",
+                "consumption_amount": "253.427",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-04-30T12:00:00.000Z",
+                "consumption_range_end": "2024-05-31T11:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "9345a999-e03c-4571-940d-3b0a84c0527b",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "264461c1-74bb-435b-8443-f7e9dcbf22c1",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "41ec1c89-81ed-40c5-bc1e-fa3762b1bfa2",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "35527d30-a492-469d-b9c6-5cb96ee9069c",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "b2162729-45fc-4f29-bee9-db1374beac60",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "1fe52005-476d-4112-8355-7176f0eb26ef",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "7975c5f2-586d-4cae-98a9-b41937183dec",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "cd2d9431-168e-4bed-ad4d-9fbb97346d1e",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "35421a19-b163-4251-83f8-39c48fee7b60",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "f9aaee70-b367-44c1-9c4d-cc8c0d49f688",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "c295cfd2-aea5-4cd0-9966-a83bdcd39e9e",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/7b1a81a1-2220-4016-8ff4-5975c3396a8b",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/7b1a81a1-2220-4016-8ff4-5975c3396a8b"
+            }
+        },
+        {
+            "id": "264461c1-74bb-435b-8443-f7e9dcbf22c1",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20186324,
+                "due_at": "2024-05-23T11:59:59.000Z",
+                "invoiced_at": "2024-05-13T12:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "7.18",
+                "total_incl_gst": "55.05",
+                "total_excl_gst": "47.87",
+                "balance": "0.0",
+                "consumption_amount": "161.756",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-03-31T11:00:00.000Z",
+                "consumption_range_end": "2024-04-30T11:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "ce98b28d-05e0-4f3e-bc66-d140420728f8",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "6c0ab989-7699-4477-a707-8a38042b3a4c",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "7b5d2b6f-285d-4bdc-bfb3-34aa52664b70",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "78a415c3-285c-4c1f-9713-83c7591d25ad",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "fa1985d3-969d-4c62-9ce2-9de09525235f",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "62fe0511-07a9-48ee-9eaa-d732fe042b57",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "3bc4b987-1db0-4567-a676-3221882c96a6",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "4e691b15-3c7d-4d43-a76f-9ad0adefdd12",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/264461c1-74bb-435b-8443-f7e9dcbf22c1",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/264461c1-74bb-435b-8443-f7e9dcbf22c1"
+            }
+        },
+        {
+            "id": "6c0ab989-7699-4477-a707-8a38042b3a4c",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20091409,
+                "due_at": "2024-04-18T11:59:59.000Z",
+                "invoiced_at": "2024-04-08T12:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "6.2",
+                "total_incl_gst": "47.53",
+                "total_excl_gst": "41.33",
+                "balance": "0.0",
+                "consumption_amount": "100.555",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-02-29T11:00:00.000Z",
+                "consumption_range_end": "2024-03-31T10:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "6896f0d1-4581-4e2e-abee-12cf72c0f8ed",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "a6d342f1-f326-4a7d-a60d-1c8c5642e702",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "87f820a1-ef10-4380-b9b9-9c5eb52ff070",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "9f397f05-edab-44d3-9b5c-e646a4c8c30e",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "33c0611d-6657-4680-93a8-91df50b5e652",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "001377a0-e4ac-4c42-bd44-8b8473bfab18",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/6c0ab989-7699-4477-a707-8a38042b3a4c",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/6c0ab989-7699-4477-a707-8a38042b3a4c"
+            }
+        },
+        {
+            "id": "a6d342f1-f326-4a7d-a60d-1c8c5642e702",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 20013064,
+                "due_at": "2024-03-21T10:59:59.000Z",
+                "invoiced_at": "2024-03-11T11:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "4.95",
+                "total_incl_gst": "37.98",
+                "total_excl_gst": "33.03",
+                "balance": "0.0",
+                "consumption_amount": "62.266",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2024-01-31T11:00:00.000Z",
+                "consumption_range_end": "2024-02-29T10:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "83fb75f7-2f00-4a83-a5b7-b4d109f7d193",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "c537d558-4657-4326-82e1-c6b189fe4d13",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "5e3c899b-3134-4970-9256-1a1e56eacb1f",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "1f1e96e0-b1c2-4c62-8328-6af80e08bcb3",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "725d76d0-43f3-4bfd-928d-15efc5c31ac9",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "f4eea3de-aefa-48f7-bade-c5673a208364",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/a6d342f1-f326-4a7d-a60d-1c8c5642e702",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/a6d342f1-f326-4a7d-a60d-1c8c5642e702"
+            }
+        },
+        {
+            "id": "c537d558-4657-4326-82e1-c6b189fe4d13",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 19933876,
+                "due_at": "2024-02-22T10:59:59.000Z",
+                "invoiced_at": "2024-02-12T11:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "5.06",
+                "total_incl_gst": "38.76",
+                "total_excl_gst": "33.7",
+                "balance": "0.0",
+                "consumption_amount": "59.614",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2023-12-31T11:00:00.000Z",
+                "consumption_range_end": "2024-01-31T10:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "958cc4de-b741-4dff-9ad6-ac189498404c",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "2f962786-00a6-4b5b-b684-2d0df6f740cf",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "34a0bad6-10d5-4251-8def-127823abe3bf",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "7f6697d6-9292-438a-9e3f-6e3654e04abb",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "3d1502e4-a11f-47ab-a435-40fdc495c293",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "9c954b63-f8cb-4065-a31e-618a71e2a14d",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/c537d558-4657-4326-82e1-c6b189fe4d13",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/c537d558-4657-4326-82e1-c6b189fe4d13"
+            }
+        },
+        {
+            "id": "2f962786-00a6-4b5b-b684-2d0df6f740cf",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 19842079,
+                "due_at": "2024-01-18T10:59:59.000Z",
+                "invoiced_at": "2024-01-08T11:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "6.02",
+                "total_incl_gst": "46.15",
+                "total_excl_gst": "40.13",
+                "balance": "0.0",
+                "consumption_amount": "96.398",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2023-11-30T11:00:00.000Z",
+                "consumption_range_end": "2023-12-31T10:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "5c995852-5b9d-40c7-9add-db45b81f67b1",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "218e6393-1b09-4a98-a00d-ce9541107203",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": []
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "9465a9a6-9ead-4f44-b35b-694d71ff5b1f",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "0ea18731-1a93-4289-bdce-37db83058345",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "3756d1ed-7469-45ec-98ab-844ab20ec5e2",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "2ee9a070-a114-4658-9547-b18f7e70c60b",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/2f962786-00a6-4b5b-b684-2d0df6f740cf",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/2f962786-00a6-4b5b-b684-2d0df6f740cf"
+            }
+        },
+        {
+            "id": "218e6393-1b09-4a98-a00d-ce9541107203",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 19764131,
+                "due_at": "2023-12-21T10:59:59.000Z",
+                "invoiced_at": "2023-12-11T11:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "6.4",
+                "total_incl_gst": "49.08",
+                "total_excl_gst": "42.68",
+                "balance": "0.0",
+                "consumption_amount": "112.794",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2023-10-31T11:00:00.000Z",
+                "consumption_range_end": "2023-11-30T10:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "d340af0a-77ac-4e55-8c86-fb04b8f51a7f",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "c914f9e2-57ef-40f2-885e-03305d07077a",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": [
+                        {
+                            "id": "a7aa8282-7457-45dc-bcd4-0a19c1254fb7",
+                            "type": "billing_payment_transaction"
+                        }
+                    ]
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "b723f936-3f63-4655-81bc-8cb6dea71bc7",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "5056d69a-490c-41c3-8d84-76c29e89a91c",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "aacc014d-4c04-406c-8ee9-7538d123091b",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "8624fec3-c181-4b5c-b9ec-9ca93105f76e",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/218e6393-1b09-4a98-a00d-ce9541107203",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/218e6393-1b09-4a98-a00d-ce9541107203"
+            }
+        },
+        {
+            "id": "c914f9e2-57ef-40f2-885e-03305d07077a",
+            "type": "billing_receivable_invoice",
+            "attributes": {
+                "invoice_number": 19688281,
+                "due_at": "2023-11-23T10:59:59.000Z",
+                "invoiced_at": "2023-11-13T11:00:00.000Z",
+                "status": "paid",
+                "display_status": "paid",
+                "maximum_payment_amount_to_take": null,
+                "total_gst": "6.15",
+                "total_incl_gst": "47.12",
+                "total_excl_gst": "40.97",
+                "balance": "0.0",
+                "consumption_amount": "144.763",
+                "consumption_unit_code": "kWh",
+                "consumption_range_begin": "2023-09-30T11:00:00.000Z",
+                "consumption_range_end": "2023-10-31T10:59:59.000Z",
+                "consumption_range_duration": "P1M",
+                "s3_object_url": null
+            },
+            "relationships": {
+                "customer": {
+                    "data": {
+                        "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+                        "type": "billing_customer"
+                    }
+                },
+                "payable_invoice": {
+                    "data": {
+                        "id": "b7011c6d-745e-44dd-a4a5-5b5e2b744bba",
+                        "type": "billing_payable_invoice"
+                    }
+                },
+                "previous_invoice": {
+                    "data": {
+                        "id": "4584d783-6988-4717-9906-895e11b56175",
+                        "type": "billing_receivable_invoice"
+                    }
+                },
+                "payment_transactions": {
+                    "data": [
+                        {
+                            "id": "0e3c1945-7d6f-4985-8fb3-4d766d4045d5",
+                            "type": "billing_payment_transaction"
+                        }
+                    ]
+                },
+                "line_items": {
+                    "data": [
+                        {
+                            "id": "f465df05-0fe8-40cb-94b6-0cce9545ae5e",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "841d3d01-d42c-4ba9-9ad0-f71715a390b6",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "347f4fbb-4ac5-4ec6-af3d-6650b8be9be3",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "0b5a0961-c311-423b-bde5-03f7e364a6ff",
+                            "type": "billing_line_item"
+                        },
+                        {
+                            "id": "8147320a-63e9-4b1d-a88f-53498449ed1e",
+                            "type": "billing_line_item"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/billing/v1/receivable_invoices/c914f9e2-57ef-40f2-885e-03305d07077a",
+                "billing_entity": "https://api.flickuat.com/billing/billing_entities/:customer_id",
+                "pdf": "https://api.flickuat.com/billing/prepared_invoices/c914f9e2-57ef-40f2-885e-03305d07077a"
+            }
+        },
+        {
+            "id": "5dfc4978-07de-4d18-8ef7-055603805ba6",
+            "type": "provisioning_application",
+            "attributes": {
+                "icp_number": "0001437111UNB40",
+                "supply_node_ref": "/network/nz/supply_nodes/ed7617df-4b10-4c8a-a05d-97e91f488299",
+                "requested_switch_date": "2023-03-01",
+                "switch_type": "move_in",
+                "power_available": "true",
+                "brand": "flick",
+                "brand_newcomer": true,
+                "product_selected": "flat",
+                "bundle_ref": null,
+                "usage_type": "low",
+                "location_classification": "residential",
+                "billing_period": "monthly",
+                "billing_period_offset_weeks": 0,
+                "state": "network_assigned"
+            },
+            "relationships": {
+                "current_application_journey_state": {
+                    "data": {
+                        "id": "network_assigned",
+                        "type": "provisioning_application_journey_state"
+                    }
+                },
+                "application_journey_states": {
+                    "data": [
+                        {
+                            "id": "initiated",
+                            "type": "provisioning_application_journey_state"
+                        },
+                        {
+                            "id": "pending_claim_validation",
+                            "type": "provisioning_application_journey_state"
+                        },
+                        {
+                            "id": "network_assignment",
+                            "type": "provisioning_application_journey_state"
+                        },
+                        {
+                            "id": "network_assigned",
+                            "type": "provisioning_application_journey_state"
+                        }
+                    ]
+                },
+                "autoswitch_rule_failures": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "https://api.flickuat.com/provisioning/v1/applications/5dfc4978-07de-4d18-8ef7-055603805ba6"
+            }
+        },
+        {
+            "id": "134800",
+            "type": "customer_account",
+            "attributes": {
+                "account_number": "10127904",
+                "billing_name": "9973debf-963f-49b0-9a73-Ba9c3400cbed@Anonymised Example",
+                "billing_email": null,
+                "address": "18 B Normanby Street, Newtown, Wellington 6021",
+                "brand": "flick",
+                "vulnerability_state": "none",
+                "medical_dependency": false,
+                "status": "active",
+                "start_at": "2023-03-02T00:00:00.000+13:00",
+                "end_at": null,
+                "application_id": "5dfc4978-07de-4d18-8ef7-055603805ba6",
+                "active": true,
+                "on_join_journey": false,
+                "placeholder": false
+            },
+            "relationships": {
+                "user": {
+                    "data": {
+                        "id": "106676",
+                        "type": "customer_user"
+                    }
+                },
+                "sign_up": {
+                    "data": {
+                        "id": "877039",
+                        "type": "customer_sign_up"
+                    }
+                },
+                "main_customer": {
+                    "data": {
+                        "id": "108335",
+                        "type": "customer_customer"
+                    }
+                },
+                "main_consumer": {
+                    "data": {
+                        "id": "108291",
+                        "type": "customer_icp_consumer"
+                    }
+                },
+                "primary_contact": {
+                    "data": {
+                        "id": "121953",
+                        "type": "customer_contact"
+                    }
+                },
+                "default_payment_method": {
+                    "data": {
+                        "id": "602801",
+                        "type": "customer_payment_method"
+                    }
+                },
+                "phone_numbers": {
+                    "data": [
+                        {
+                            "id": "111604",
+                            "type": "customer_phone_number"
+                        }
+                    ]
+                },
+                "payment_methods": {
+                    "data": [
+                        {
+                            "id": "602801",
+                            "type": "customer_payment_method"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "1d679a0d-d42e-4528-bc07-00be88727245",
+            "type": "billing_nominated_billing_period",
+            "attributes": {
+                "valid_from": "2023-03-01T11:00:00.000Z",
+                "valid_until": null,
+                "period": "P1M",
+                "offset_weeks": 0
+            }
+        },
+        {
+            "id": "5fd3e33b-82e7-4646-bbbb-03f2f999c0cd",
+            "type": "billing_customer",
+            "attributes": {
+                "customer_number": 324746,
+                "due_balance": "207.92",
+                "credit_balance": "12.86",
+                "overdue_balance": "115.7",
+                "brand": "flick"
+            },
+            "relationships": {
+                "billing_preference": {
+                    "data": {
+                        "id": "33529648-0e11-4604-9b0d-0e01f90a301d",
+                        "type": "billing_billing_preference"
+                    }
+                },
+                "nominated_billing_period": {
+                    "data": {
+                        "id": "1d679a0d-d42e-4528-bc07-00be88727245",
+                        "type": "billing_nominated_billing_period"
+                    }
+                },
+                "network_claims": {
+                    "data": [
+                        {
+                            "id": "20a86916-9a21-404b-a113-b0c93b913667",
+                            "type": "billing_network_claim"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "meta": {
+        "verb": "get",
+        "type": "public_website_dashboard_state",
+        "params": [],
+        "permission": {
+            "uri": null,
+            "data_context": null
+        },
+        "host": "https://api.flickuat.com",
+        "service": "public_website",
+        "path": "/dashboard_state",
+        "description": "Returns initial state about a user for the dashboard",
+        "respond_with_array": false
+    }
+}
