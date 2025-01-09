@@ -2,6 +2,12 @@
 
 We use [SemVer](https://semver.org/) for our versioning and follow [this convention](https://keepachangelog.com/en/1.1.0/) for our changelogs.
 
+## [1.0.2] - 2025-01-09
+
+### Fixed
+
+- Handle response with empty array data correctly
+
 ## [1.0.1] - 2024-09-20
 
 ### Changed
