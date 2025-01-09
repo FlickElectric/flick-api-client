@@ -1,5 +1,8 @@
 const { deserialize } = require('.')
-const json = require('./sample.json')
-const result = deserialize(json)
+const sample = require('./sample.json')
+const sampleResult = deserialize(sample)
+console.log(sampleResult)
 
-console.log(result)
+const empty = require('./empty.json')
+const emptyResult = deserialize(empty)
+console.log(emptyResult)

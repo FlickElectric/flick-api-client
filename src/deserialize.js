@@ -38,7 +38,7 @@ module.exports = ({ data, included }) => {
     return str.replace(/_([a-z])/g, (g) => g[1].toUpperCase())
   }
 
-  if (data.length) {
+  if (Array.isArray(data)) {
     return data.map(serializeItem)
   } else {
     return serializeItem(data)
