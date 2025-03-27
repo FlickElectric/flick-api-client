@@ -3,26 +3,37 @@
 module.exports = ({ data, included }) => {
   const includedMap = new Map(included?.map(item => [`${item.type}:${item.id}`, item]))
 
-  function serializeItem({ id, type, attributes = {}, relationships = {} }) {
+  function serializeItem({ id, type, attributes = {}, relationships = {} }, ancestry = []) {
     return {
       id,
       type,
       ...serializeAttributes(attributes),
-      ...serializeRelationships(relationships)
+      ...serializeRelationships(relationships, ancestry + [`${type}:${id}`])
     }
   }
 
-  function serializeRelationships(relationships) {
+  function serializeRelationships(relationships, ancestry = []) {
     return Object.entries(relationships).reduce((acc, [key, value]) => {
-      acc[camelCase(key)] = Array.isArray(value.data) ? 
-        value.data.map(item => {
-          const includedItem = includedMap.get(`${item?.type}:${item?.id}`)
-          return includedItem ? serializeItem(includedItem) : null
-        }) :
-        (() => {
-          const includedItem = includedMap.get(`${value.data?.type}:${value.data?.id}`)
-          return includedItem ? serializeItem(includedItem) : null
-        })()
+      if (Array.isArray(value.data)) {
+        value.data.forEach(item => {
+          const includedKey = `${item?.type}:${item?.id}`
+
+          if (includedMap.has(includedKey) && !ancestry.includes(includedKey)) {
+            if (!acc[camelCase(key)]) {
+              acc[camelCase(key)] = []
+            }
+
+            acc[camelCase(key)].push(serializeItem(includedMap.get(includedKey), ancestry + [includedKey]))
+          }
+        })
+      } else {
+        const includedKey = `${value.data?.type}:${value.data?.id}`
+
+        if (includedMap.has(includedKey) && !ancestry.includes(includedKey)) {
+          acc[camelCase(key)] = serializeItem(includedMap.get(includedKey), ancestry + [includedKey])
+        }
+      }
+
       return acc
     }, {})
   }
